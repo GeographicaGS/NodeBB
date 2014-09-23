@@ -184,10 +184,10 @@ module.exports = function(app, data) {
 	}));
 
 	app.use(multipart());
-	app.use(csrf());
+	//app.use(csrf());
 
 	app.use(function (req, res, next) {
-		res.locals.csrf_token = req.csrfToken();
+		//res.locals.csrf_token = req.csrfToken();
 		res.setHeader('X-Powered-By', 'NodeBB');
 
 		res.setHeader('X-Frame-Options', 'SAMEORIGIN');
